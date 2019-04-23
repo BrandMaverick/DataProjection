@@ -1,76 +1,56 @@
-﻿import React, { Component } from 'react';
+﻿import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
-import { DISHES } from '../shared/dishes';
 
-class DishDetail extends Component {
+function RenderDish({ dish }) {
+    return (
+        <div className="col-12 col-md-5 m-1">
+            <Card>
+                <CardImg width="100%" src={dish.image} alt={dish.name} />
+                <CardBody>
+                    <CardTitle>{dish.name}</CardTitle>
+                    <CardText>{dish.description}</CardText>
+                </CardBody>
+            </Card>
+        </div>
+    );
+}
 
-    constructor(props) {
-        super(props);
-
-    }
-
-    componentDidMount() {
-        console.log('Dish component componentDidMount is invoked');
-    }
-
-    componentDidUpdate() {
-        console.log('Dish component componentDidUpdate is invoked');
-
-    }
-
-    renderDish(dish) {
+function RenderComments({ comments }) {
+    if (comments != null) {
         return (
             <div className="col-12 col-md-5 m-1">
-                <Card>
-                    <CardImg width="100%" src={dish.image} alt={dish.name} />
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
+                <h4>Comments</h4>
+                <ul className="list-unstyled">
+                    {comments.map((comment) => {
+                        return (
+                            <li key={comment.id}>
+                                <p>{comment.comment}</p>
+                            </li>
+                            );
+                    })}
+                </ul>
             </div>
         );
     }
-
-    renderComments(comments) {
-        if (comments != null) {
-            return (
-                <div className="col-12 col-md-5 m-1">
-                    <h4>Comments</h4>
-                    <ul className="list-unstyled">
-                        {comments.map((comment) => {
-                            return (
-                                <li key={comment.id}>
-                                    <p>{comment.comment}</p>
-                                </li>
-                                );
-                        })}
-                    </ul>
-                </div>
-            );
-        }
-        else {
-            return (<div></div>);
-        }
+    else {
+        return (<div></div>);
     }
+}
 
-    render() {
+const DishDetail = (props) => {
 
-        console.log('Dish component render is invoked');
-
-        if (this.props.dish != null) {
-            return (
-                <div className="container">
-                    <div className="row">
-                        {this.renderDish(this.props.dish)}
-                        {this.renderComments(this.props.dish.comments)}
-                    </div>
+    if (props.dish != null) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <RenderDish dish={props.dish} />
+                    <RenderComments comments={props.dish.comments} />
                 </div>
-            );
-        }
-        else {
-            return (<div></div>);
-        }
+            </div>
+        );
+    }
+    else {
+        return (<div></div>);
     }
 }
 
