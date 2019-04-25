@@ -8,6 +8,7 @@ module.exports = {
   output: {
       path: path.join(__dirname, 'www'),
       filename: 'bundle.js',
+      publicPath: '/'
   },
   module: {
       rules: [
@@ -25,7 +26,16 @@ module.exports = {
                   'css-loader',
               ],
           },
+          {
+              test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+              use: [
+                  "url-loader?limit=100000",
+              ],
+          },
       ],
+  },
+  devServer: {
+      historyApiFallback: true,
   },
   resolve: {
       modules: [

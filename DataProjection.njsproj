@@ -46,7 +46,19 @@
   <ItemGroup>
     <Compile Include="src\App.js" />
     <Compile Include="src\App.test.js" />
+    <Compile Include="src\components\ContactComponent.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\components\DishDetailComponent.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\components\FooterComponent.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\components\HeaderComponent.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\components\HomeComponent.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\components\MainComponent.js">
@@ -56,6 +68,15 @@
     <Compile Include="src\index.js" />
     <Compile Include="src\serviceWorker.js" />
     <Compile Include="src\shared\dishes.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\shared\leaders.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\shared\promotions.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\shared\comments.js">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
