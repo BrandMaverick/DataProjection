@@ -38,6 +38,7 @@
     <Folder Include="DataProjection\DataProjection" />
     <Folder Include="src" />
     <Folder Include="src\components\" />
+    <Folder Include="src\redux\" />
     <Folder Include="src\shared\" />
     <Folder Include="www" />
     <Folder Include="www\assets\" />
@@ -66,6 +67,12 @@
     </Compile>
     <Compile Include="src\components\MenuComponent.js" />
     <Compile Include="src\index.js" />
+    <Compile Include="src\redux\configureStore.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\redux\reducer.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\serviceWorker.js" />
     <Compile Include="src\shared\dishes.js">
       <SubType>Code</SubType>
