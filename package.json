@@ -25,7 +25,10 @@
     "redux": "3.7.2",
     "style-loader": "^0.16.1",
     "webpack": "^2.7.0",
-    "webpack-dev-middleware": "^1.12.2"
+    "webpack-dev-middleware": "^1.12.2",
+    "redux-thunk": "2.2.0",
+    "redux-logger": "3.0.6",
+    "babel-plugin-transform-object-rest-spread": "6.2.4"
   },
   "devDependencies": {},
   "scripts": {

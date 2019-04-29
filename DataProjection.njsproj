@@ -62,11 +62,20 @@
     <Compile Include="src\components\HomeComponent.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\components\LoadingComponent.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\components\MainComponent.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\components\MenuComponent.js" />
     <Compile Include="src\index.js" />
+    <Compile Include="src\redux\ActionCreaters.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\redux\ActionTypes.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\redux\comments.js">
       <SubType>Code</SubType>
     </Compile>
