@@ -67,10 +67,19 @@
     </Compile>
     <Compile Include="src\components\MenuComponent.js" />
     <Compile Include="src\index.js" />
+    <Compile Include="src\redux\comments.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\redux\configureStore.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\redux\reducer.js">
+    <Compile Include="src\redux\dishes.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\redux\leaders.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\redux\promotions.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\serviceWorker.js" />
